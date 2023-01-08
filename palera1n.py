@@ -158,7 +158,7 @@ cexitRecovery.place(x=50, y=250)
 telegramaiko = tk.Button(frame,
 				   text="Telegram @AikoCute",
 				   command=telegramAiko)
-telegramaiko.place(x=220, y=250)
+telegramaiko.place(x=227, y=250)
 
 #installdepen = tk.Button(frame,
                    #text="Install Dependencies",
