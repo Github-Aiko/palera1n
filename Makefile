@@ -10,13 +10,13 @@ P1_APP_DIR        = $(P1TMP)/Build/Products/Release/palera1n.app
 package:
 	@rm -rf $(P1_REQUIRED)/*.deb
 
-	@git clone --recursive https://github.com/netsirkl64/palera1n-High-Sierra
+	@git clone --recursive https://github.com/palera1n/palera1n
 
-	@tar -czvf palera1n.tar.gz ./palera1n-High-Sierra/*
+	@tar -czvf palera1n.tar.gz ./palera1n-gui/*
 
 	@mv palera1n.tar.gz Required/
 
-	@rm -rf palera1n-High-Sierra
+	@rm -rf palera1n-gui
 
 	@set -o pipefail; xcodebuild -jobs $(shell sysctl -n hw.ncpu) -project 'palera1n.xcodeproj' -scheme palera1n -configuration Release -arch x86_64 -derivedDataPath $(P1TMP) CODE_SIGNING_ALLOWED=NO DSTROOT=$(P1TMP)/install ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO
 
