@@ -11,6 +11,8 @@ from subprocess import run
 import subprocess
 import webbrowser
 
+version = "1.0"
+
 path = os.getcwd()
 
 print(path)
@@ -126,11 +128,18 @@ my_label2.place(x=300, y=100)
 
 my_label3 = Label(frame,
                  text = "Aiko")
+
+
  
 # place the widgets
 # in the gui window
 my_label3.place(x=10, y=290)
 
+
+my_label4 = Label(frame,
+				 text = 'Version ' + str(version))
+
+my_label4.place(x=510, y=290)
 
 cbeginExploit10 = tk.Button(frame,
                    text="Tethered Jailbreak",
@@ -174,7 +183,7 @@ callback("https://t.me/aikocute"))
 
 #Create a Label to display the link
 link2 = Label(root, text="Thanks to Jailbreak @palera1n team",font=('Helveticabold', 12), fg="red", cursor="hand2")
-link2.place(x=300, y=290)
+link2.place(x=270, y=290)
 link2.bind("<Button-1>", lambda e:
 callback("https://twitter.com/palera1n"))
 
