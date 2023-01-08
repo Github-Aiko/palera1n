@@ -10,7 +10,7 @@ P1_APP_DIR        = $(P1TMP)/Build/Products/Release/palera1n.app
 package:
 	@rm -rf $(P1_REQUIRED)/*.deb
 
-	@git clone --recursive https://github.com/palera1n/palera1n
+	@git clone --recursive https://github.com/palera1n/palera1n palera1n-gui
 
 	@tar -czvf palera1n.tar.gz ./palera1n-gui/*
 
